@@ -1,0 +1,21 @@
+{
+  "name": "pw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "runBrowser": "npx playwright test --project=chromium --headed",
+    "singleRun": "npx playwright test --project=chromium --headed  --workers=1",
+    "search": "npx playwright test --project=chromium --headed  --workers=1 --grep @searchBook",
+    "detail": "npx playwright test --project=chromium --headed  --workers=1 --grep @getDetail",
+    "pagination": "npx playwright test --project=chromium --headed  --workers=1 --grep @pagination",
+    "runReport": "npx playwright show-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.48.1",
+    "@types/node": "^22.8.6"
+  }
+}
