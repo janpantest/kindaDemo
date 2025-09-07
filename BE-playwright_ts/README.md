@@ -5,7 +5,7 @@
 `npx plawright install`
 
 ## Run get request
-`npx playwright test tests/api_get.spec.ts`
+`npm run apiChain`
 
 ## Run chained request
-`npx playwright test tests/api_chained.spec.ts`
+`npm run apiGet`

@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "apiGet": "npx playwright test tests/apiGet.spec.ts",
+    "apiChained": "npx playwright test tests/apiChained.spec.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@playwright/test": "^1.54.2"
+    "@playwright/test": "^1.54.2",
+    "dotenv": "^17.2.2"
   },
   "devDependencies": {
     "@types/node": "^24.2.1",
