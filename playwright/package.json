@@ -9,6 +9,9 @@
     "search": "npx playwright test --project=chromium --headed  --workers=1 --grep @searchBook",
     "detail": "npx playwright test --project=chromium --headed  --workers=1 --grep @getDetail",
     "pagination": "npx playwright test --project=chromium --headed  --workers=1 --grep @pagination",
+    "apiTest": "npx playwright test tests/be --workers=1",
+    "apiChained": "npx playwright test tests/be/apiChained.api.spec.ts --project=chromium",
+    "apiGet": "npx playwright test tests/be/apiGet.api.spec.ts --project=chromium",
     "runReport": "npx playwright show-report"
   },
   "keywords": [],
@@ -16,6 +19,7 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.48.1",
-    "@types/node": "^22.8.6"
+    "@types/node": "^22.8.6",
+    "dotenv": "^16.3.1"
   }
 }

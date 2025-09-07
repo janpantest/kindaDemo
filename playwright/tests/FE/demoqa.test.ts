@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import * as demoqaSteps from '../steps/demoqa.steps';
+import * as demoqaSteps from '../../steps/demoqa.steps';
 
 const url = '/books';
 const title = 'Git Pocket Guide';
