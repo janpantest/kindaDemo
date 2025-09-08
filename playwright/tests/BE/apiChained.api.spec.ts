@@ -12,7 +12,7 @@ test.describe('Chained API calls - DemoQA', () => {
 
   const userName = `${process.env.USERNAME_PREFIX}${Date.now()}`;
   const password = process.env.PASSWORD!;
-  const baseURL = process.env.BASE_URL!;
+  // const baseURL = process.env.BASE_URL!;
   let userId: string;
   let token: string;
   const responseKey = 'books';
@@ -20,7 +20,7 @@ test.describe('Chained API calls - DemoQA', () => {
 
   test.beforeAll(async () => {
     apiContext = await request.newContext({
-      baseURL,
+      // baseURL,
       extraHTTPHeaders: {
         'Content-Type': 'application/json',
         accept: 'application/json',
@@ -66,7 +66,7 @@ test.describe('Chained API calls - DemoQA', () => {
   
     expect(addBookResponse.status()).toBe(201);
     const addBookBody = await addBookResponse.json();
-    // console.info('Add Book Response:', addBookBody);
+    console.info('Add Book Response:', addBookBody);
     expect(addBookBody).toHaveProperty(responseKey);
     addBookBody[responseKey].forEach((item: any) => {
       expect(item).toHaveProperty(chainedKey);
