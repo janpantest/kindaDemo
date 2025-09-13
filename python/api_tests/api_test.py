@@ -5,6 +5,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 from typing import Generator
 from playwright.sync_api import Playwright, APIRequestContext
+from helpers.api_keys import Keys
 
 # dotenv_path = Path(__file__).parent.parent / ".env"  # points to root
 # load_dotenv(dotenv_path=dotenv_path)
@@ -71,7 +72,7 @@ def test_chained_api_calls(api_context: APIRequestContext):
     print(create_user_response.status)
     print(create_user_response.text())
     assert create_user_response.status == 201
-    user_id = create_user_response.json()["userID"]
+    user_id = create_user_response.json()[Keys.USER_ID]
     assert user_id
 
     # 2. Generate token
@@ -81,7 +82,7 @@ def test_chained_api_calls(api_context: APIRequestContext):
     )
     print(token_response.text())
     assert token_response.status == 200
-    token = token_response.json()["token"]
+    token = token_response.json()[Keys.TOKEN]
     assert token
 
     # 3. Authorize user
@@ -101,4 +102,4 @@ def test_chained_api_calls(api_context: APIRequestContext):
     assert add_book_response.status == 201
     add_book_body = add_book_response.json()
     print(add_book_body)
-    assert "books" in add_book_body
+    assert Keys.BOOKS in add_book_body
