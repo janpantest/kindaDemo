@@ -1,4 +1,4 @@
-from playwright.sync_api import Page, expect
+from playwright.sync_api import Page
 from helpers.helper import click_if_visible
 
 class IceHomePage:
