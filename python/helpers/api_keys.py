@@ -1,4 +1,5 @@
 class Keys:
-    USER_ID="userID"
-    TOKEN="token"
-    BOOKS="books"
+    USER_ID = "userID"
+    TOKEN = "token"
+    BOOKS = "books"
+

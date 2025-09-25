@@ -2,6 +2,7 @@ import os
 import time
 from dotenv import load_dotenv
 from playwright.sync_api import APIRequestContext
+# from playwright.sync_api import Playwright, APIRequestContext
 from helpers.api_keys import Keys
 from payloads.request_payloads import payload_add_book, payload_authorize_user, payload_create_user, payload_generate_token
 from fixtures.api_fixture import api_context
@@ -70,7 +71,7 @@ def test_chained_api_calls(api_context: APIRequestContext):
     )
     print(create_user_response.status)
     print(create_user_response.text())
-    # assert create_user_response.status == 201
+    assert create_user_response.status == 201
     user_id = create_user_response.json()[Keys.USER_ID]
     assert user_id
 
