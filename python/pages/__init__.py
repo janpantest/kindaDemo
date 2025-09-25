@@ -1,13 +1,10 @@
 # pages/__init__.py
-
-from .brno_home import BrnoHome
-from .brno_need import BrnoNeed
-from .brno_garbage import BrnoGarbage
-from .brno_garbage_pay import BrnoGarbagePay
+from .ice_home_page import IceHomePage
+from .ice_login_page import IceLoginPage
+from .ice_profile_page import IceProfilePage
 
 __all__ = [
-    "BrnoHome",
-    "BrnoNeed",
-    "BrnoGarbage",
-    "BrnoGarbagePay",
+    "IceHomePage",
+    "IceLoginPage",
+    "IceProfilePage",
 ]

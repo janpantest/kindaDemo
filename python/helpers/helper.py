@@ -1,4 +1,4 @@
-from playwright.sync_api import Page, expect, Locator
+from playwright.sync_api import Locator
 
 def click_if_visible(locator: Locator):
     elementVisible = if_element_visibe(locator)
