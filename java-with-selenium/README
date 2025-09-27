@@ -1,0 +1,16 @@
+## Generate maven project
+`mvn archetype:generate -DgroupId=com.yourname.selenium -DartifactId=selenium-project -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false`
+
+## Update pom.xml if needed
+-------
+## Build app
+`mvn clean install`
+
+## Create .env file
+`copy paste .env_example and set variables`
+
+## Run test
+`mvn test`
+
+## Run specific test
+e.g.: `mvn -Dtest=UpdatedTest test`
